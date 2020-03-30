@@ -62,6 +62,7 @@ server.listen(port, function() {
     }
     console.log("NextCloud Talk -- HTTP server is running at '" + httpUrl + "'");
     console.log("NextCloud Talk -- signal master is running at '" + wsUrl + "'");
+    console.log("Development Mode: " + config.isDev);
 });
 
 wsServer = new WebSocketServer({
