@@ -32,6 +32,12 @@ var config = require('getconfig'),
             response.end('OK');
             return;
         }
+        if (request.url === '/spreed') {
+            console.log(Date.now(), 'spreed');
+            response.writeHead(200);
+            response.end('OK');
+            return;
+        }
         response.writeHead(404);
         response.end();
     },
@@ -65,7 +71,7 @@ server.listen(port, function() {
     console.log("Development Mode: " + config.isDev);
 });
 
-wsServer = new WebSocketServer("ws://" + host + ":" + port + "/spreed", {
+wsServer = new WebSocketServer({
     httpServer: server,
     // You should not use autoAcceptConnections for production
     // applications, as it defeats all standard cross-origin protection
