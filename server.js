@@ -65,7 +65,7 @@ server.listen(port, function() {
     console.log("Development Mode: " + config.isDev);
 });
 
-wsServer = new WebSocketServer({
+wsServer = new WebSocketServer("ws://" + host + ":" + port + "/spreed", {
     httpServer: server,
     // You should not use autoAcceptConnections for production
     // applications, as it defeats all standard cross-origin protection
