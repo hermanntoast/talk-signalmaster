@@ -2,7 +2,7 @@
   "isDev": true,
   "server": {
     "port": 8888,
-    "host": "localhost",
+    "host": "ncd.netzint.de",
     "/* secret */": "/* shared secret */",
     "secret": "dummy_shared_secret",
     "/* secure */": "/* whether this connects via https */",
